@@ -1,9 +1,13 @@
 package com.test.cinema.cinema;
 
 import java.util.HashMap;
+
+
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
+
+import com.google.gson.Gson;
 
 public class Service {
 	private Map<Integer, Movies> movieList = new HashMap<Integer, Movies>();
@@ -35,6 +39,12 @@ public class Service {
 	         System.out.print("key is: "+ mentry.getKey() + " & Value is: ");
 	         System.out.println(mentry.getValue());
 	      }
+	}
+	
+	public String toJson()
+	{
+		Gson g = new Gson();
+		return g.toJson(movieList);
 	}
 	
 }

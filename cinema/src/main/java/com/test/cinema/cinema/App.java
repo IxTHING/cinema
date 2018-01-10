@@ -7,7 +7,6 @@ package com.test.cinema.cinema;
 public class App 
 {
 	
-	
     public static void main( String[] args )
     {
         System.out.println( "Hello World!" );
@@ -20,5 +19,6 @@ public class App
         service.addMovie(starWars);
         service.deleteMovie(1);
         service.printMap();
+        System.out.print(service.toJson());
     }
 }
